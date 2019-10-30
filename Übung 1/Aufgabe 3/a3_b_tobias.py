@@ -1,5 +1,5 @@
-h=int(input("Ankuftszeit Stunden:"))
-m=int(input("Ankuftszeit Minuten:"))
+h=int(input("Stunden:"))
+m=int(input("Minuten:"))
 hm= h*60 + m
 hm-= 7*60
 if hm < 0: hm+= 24*60
