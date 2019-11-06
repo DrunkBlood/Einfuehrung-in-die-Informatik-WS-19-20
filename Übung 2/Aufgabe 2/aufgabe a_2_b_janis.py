@@ -1,5 +1,5 @@
 z=input("Geben sie eine verschlüsselte Zeichenkette ein: ")
-x=int(input("Geben sie eine Zahl ein, um welche die Zeichenkette zurückverschoben werden soll: ")) #x<=0
+x=int(input("Geben sie eine Zahl ein, um welche die Zeichenkette zurueckverschoben werden soll: ")) #x<=0
 fin= " "
 for char in z:
     y=ord(char)
