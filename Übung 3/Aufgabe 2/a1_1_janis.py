@@ -10,22 +10,16 @@ def find_pos (zeichen,buchstabe):
             l=l+1
     for char in zeichen:
         if char != buchstabe:
-            return(-1)
-    
+            return(-1)    
 zeichen=input(str("Zeichenkette : " ))
 buchstabe=input("Buchstabe : " )
 out1= find_pos(zeichen,buchstabe)
 print(out1)
-#Teilaufgabe a
-
 f=open("de_DE_frami.txt")
 n = open("dictionary.txt","w")
 line = f.readline()
 i = 0
 while line != "":
-    #print (repr(line))
-    print(i)
-    i = i+1
     if "#" not in line:
         if "\t\n" not in line:
             for slash in line:
@@ -33,11 +27,8 @@ while line != "":
                     slashindex = line.index(slash)
                     line = line[0:slashindex]
                     line = line + "\n"
-         n.write(line)
-    
+         n.write(line)   
     line = f.readline()
-    if i == 100:
-        break
 f.close()
 n.close()
 print("bin feddisch alda")
