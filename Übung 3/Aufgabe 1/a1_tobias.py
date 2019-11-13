@@ -29,4 +29,4 @@ def findCubeRoot(w,e):
     erg=findIntCubeRoot(zaehler,e)/findIntCubeRoot(nenner,e)
     if addMinus:erg*=-1
     return erg
-print(findCubeRoot(float(input("float ")),float(input("eps "))))
+#print(findCubeRoot(float(input("float ")),float(input("eps "))))
