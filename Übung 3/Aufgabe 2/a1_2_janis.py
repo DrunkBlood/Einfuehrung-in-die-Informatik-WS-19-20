@@ -5,9 +5,9 @@ line = n.readline()
 while line != "":
     l=l+1
     if x in line:
+       print(l)
        break
     line = n.readline()
-    print(l)
 n.close()
         
         
