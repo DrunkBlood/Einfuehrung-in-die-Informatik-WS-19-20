@@ -1,0 +1,51 @@
+Beweise RT(fib(n+1),fib(n)) = n-1 mit n>=1
+
+Fibonacci-Zahlen induktiv:
+fib(n) = fib(n-2) + fib(n-1) mit fib(1) = fib(0) = 1, n>1 <=> n>=2 
+Induktionsanfang n=1.
+
+RT(fib(2),fib(1)) = 1-1 = 0
+
+fib(2) = fib(2-1) + fib(2-2) = fib(1) + fib(0) = 1 + 1 = 2
+fib(1) = 1
+
+=> RT(2,1) = 0
+
+2 mod 1 = 2 + 0
+Da 2//1 aufgeht gibt es keinen rekursiven Aufruf
+=> RT(2,1) == 0
+
+Induktionsschritt n -> n+1
+
+=> Induktionsbehauptung:
+	RT(fib(n+2),fib(n+1)) = n
+	
+=> Induktionsanahme:
+	RT(fib(n+1),fib(n)) = n-1
+	
+Der Algorithmus versucht nun im 1. Schritt fib(n+2) mod fib(n+1) zu rechnen
+
+Wenn der Modulo aufgeht d.h. der Modulo wird 0 dann gibt es keinen Aufruf
+Wenn der Modulo nicht aufgeht d.h. der Modulo ist ungleich 0 dann rufe ich die Funktion mit fib(n+1) und fib(n+2) mod fib(n+1) auf 
+und inkrementiere daher RT um 1
+
+Nach der Definition des Euklidischen Algorithmus folgt
+
+I:  fib(n+2) = q*fib(n+1) + r 
+
+und nach der Definition von den Fibonacci-Zahlen ist fib(n+2) wie folgt:
+
+II: fib(n+2) = 1*fib(n+1) + fib(n)
+
+Nach Koeffizientenvergleich von I und II ist 
+q = 1 und r = fib(n) d.h. der Modulo ist nicht null, da sonst der Rest r Null wäre
+Somit wird eine rekursiver Aufruf getätigt
+Also folgt:
+
+RT(fib(n+2),fib(n+1)) <=> RT(fib(n+1),fib(n)) + 1 
+=> RT(fib(n+1),fib(n)) + 1 = n
+
+Mit der Induktionsanahme eingesetzt ergibt sich
+
+(n - 1) + 1 = n
+n = n, was eine wahre Aussage ist und so RT(fib(n+1),fib(n)) = n-1 gilt
