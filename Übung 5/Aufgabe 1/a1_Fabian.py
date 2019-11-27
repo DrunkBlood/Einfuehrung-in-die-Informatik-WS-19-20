@@ -14,8 +14,8 @@ def max(x, k):
     elif x == s:
         return x
 
-    else:
-
+    else: 
+        for char in x[::-1]:
                 return max(vertausche(x, k - 1, x.index(char)), k - 1)
 
 
