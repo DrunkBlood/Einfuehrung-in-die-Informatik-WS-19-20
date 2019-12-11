@@ -27,7 +27,7 @@ def addiere(n,m):
 if __name__ == "__main__":
     # F\"uhren Sie hier den Glass Box Test fuer Funktion next_palindrome durch
 
-    next_palindrome("23",3) ## schreiben Sie hier was hier abgedeckt wird...
+    #next_palindrome("23",3) ## schreiben Sie hier was hier abgedeckt wird...
     #while
     next_palindrome("123",0)# Die while-Schleife wird nicht bei k<=0 ausgeführt
     next_palindrome("121",1)# 1 mal
